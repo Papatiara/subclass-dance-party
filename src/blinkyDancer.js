@@ -17,3 +17,17 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
   return blinkyDancer;
 };
+
+var BlinkyDancer = function(top, left, timeBetweenSteps) {
+  Dancer.apply(this, arguments);
+  this.$node = $('<span class="my-dancer my-alternate-dancer"></span>');
+}
+BlinkyDancer.prototype = Object.create( Dancer.prototype );
+BlinkyDancer.prototype.constructor = BlinkyDancer;
+
+BlinkyDancer.prototype.step = function() {
+  Dancer.prototype.step();
+  console.log("Blink!");
+}
+
+console.log(window);
