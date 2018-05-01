@@ -4,8 +4,8 @@ $(document).ready(function() {
 
     var danceClass = $(this).data('dancer-maker-function-name');
     var dancer = new window[danceClass](
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
     
@@ -16,6 +16,4 @@ $(document).ready(function() {
     
   });
 
-
 });
-
