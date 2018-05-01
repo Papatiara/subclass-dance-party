@@ -32,6 +32,7 @@ Dancer.prototype.setPosition = function() {
 Dancer.prototype.step = function() {
   if ( !$('body').hasClass('lineUp') ) {
     setTimeout(this.step.bind(this), this.timeBetweenSteps);
+    this.setPosition();
   }
 };
 

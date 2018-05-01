@@ -9,8 +9,8 @@ $(document).ready(function() {
 
     var createDancer = function(danceClass) {
       let dancer = new window[danceClass](
-        $('body').height() * Math.random(),
-        $('body').width() * Math.random(),
+        Math.floor( $('body').height() * Math.random() ),
+        Math.floor( $('body').width() * Math.random() ),
         Math.random() * 1000
       );
       
