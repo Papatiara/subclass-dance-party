@@ -9,6 +9,7 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     
+    dancer.setColor();
     dancer.setPosition();
     dancer.step();
 

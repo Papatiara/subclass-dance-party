@@ -54,9 +54,11 @@ a:link, a:visited, a:active {
 
 .samba-dancer {
   background: pink;
-  opacity: 0.1;
-  transition: 0.2s opacity ease-in-out;
+  opacity: 0.4;
+  transition: 0.5s all ease-in-out;
+  transform: translate(0,0);
 }
 .samba-dancer.pulse {
   opacity: 1;
+  transform: translate(4px,4px);
 }
