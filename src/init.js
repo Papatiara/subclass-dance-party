@@ -2,8 +2,8 @@ $(document).ready(function() {
 
   $('.addDancerButton').on('click', function(event) {
 
-    var fn = $(this).data('dancer-maker-function-name');
-    var dancer = new window[fn](
+    var danceClass = $(this).data('dancer-maker-function-name');
+    var dancer = new window[danceClass](
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
