@@ -13,13 +13,13 @@ $(document).ready(function() {
         Math.floor( $('body').width() * Math.random() ),
         Math.random() * 1000
       );
-      
-      dancer.setColor();
-      dancer.setPosition();
-      dancer.step();
-
-      $('body').append(dancer.$node);
       dancers.push( dancer );
+      dancer.init();
+      
+      $(dancer.$node).on('click', function(event) {
+        dancer.clear();
+      });
+      
     };
     createDancer(danceClass);
 
@@ -51,10 +51,6 @@ $(document).ready(function() {
   $(document).on('mouseleave', '.samba-dancer', function(event) {
     event.preventDefault();
     $(this).removeClass('scale');
-  });
-  $(document).on('click', '.dancer img', function(event) {
-    event.preventDefault();
-    $(this).parent().remove();
   });
 
 });

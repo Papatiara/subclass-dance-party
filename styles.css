@@ -58,13 +58,13 @@ img {
   cursor: crosshair;
   display: block;
   position: absolute;
+  transition: 0.3s all ease-in-out;
   width: 75px;
 }
 
 .pulsing-dancer {
   opacity: 0.75;
   transform: translate(0,0);
-  transition: 0.4s opacity ease-in-out;
   width: 100px;
 }
 .pulsing-dancer.pulse {
@@ -74,7 +74,6 @@ img {
 .samba-dancer {
   opacity: 1;
   transform: translate(0,0);
-  transition: 0.3s all ease-in-out;
   width: 100px;
 }
 .samba-dancer.pulse {
