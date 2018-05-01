@@ -1,11 +1,11 @@
-var BlinkyDancer = function(top, left, timeBetweenSteps) {
+var BlinkingDancer = function(top, left, timeBetweenSteps) {
   Dancer.apply(this, arguments);
-  this.$node = $('<span class="my-dancer my-alternate-dancer"></span>');
+  this.$node = $('<span class="dancer blinking-dancer"></span>');
 };
-BlinkyDancer.prototype = Object.create( Dancer.prototype );
-BlinkyDancer.prototype.constructor = BlinkyDancer;
+BlinkingDancer.prototype = Object.create( Dancer.prototype );
+BlinkingDancer.prototype.constructor = BlinkingDancer;
 
-BlinkyDancer.prototype.step = function() {
+BlinkingDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   this.$node.toggle();
 };

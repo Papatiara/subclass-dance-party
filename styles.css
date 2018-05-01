@@ -1,41 +1,62 @@
-body, html{
-  height:100%;
-}
-body{
-  margin: 0px;
-  background-color:#444;
-  font-size: 18px;
-  overflow: hidden;
-}
-body, a:link, a:visited, a:active{
-  color: lightblue;
-}
-.title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
-}
-.topbar{
-  height:32px;
-  background-color: #555;
-}
-.title{
-  background-color: #777;
-}
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+body,
+html {
+  height: 100%;
 }
 
-.my-dancer {
-  background: yellow;
+body {
+  background-color: #444;
+  font-size: 18px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+body,
+a:link, a:visited, a:active {
+  color: lightblue;
+}
+
+.title,
+.addDancerButton {
+  padding: 5px 12px;
+  float: right;
+}
+
+.topbar {
+  height: 32px;
+  background-color: #555;
+}
+
+.title {
+  background-color: #777;
+}
+
+.dancer {
+  background-color: red;
+  border: 0 solid red;
+  border-radius: 10px;
   display: block;
-  float: left;
-  margin: 12px;
   position: absolute;
   width: 24px; height: 24px;
 }
 
-.my-dancer.my-alternate-dancer {
-  background: red;
+.blinking-dancer {
+  
+}
+
+.pulsing-dancer {
+  background: green;
+  opacity: 0.1;
+  transition: 0.2s opacity ease-in-out;
+}
+.pulsing-dancer.pulse {
+  opacity: 1;
+}
+
+.samba-dancer {
+  background: pink;
+  opacity: 0.1;
+  transition: 0.2s opacity ease-in-out;
+}
+.samba-dancer.pulse {
+  opacity: 1;
 }
