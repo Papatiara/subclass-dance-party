@@ -1,6 +1,6 @@
-$(document).ready(function() {
+var dancers = [];
 
-  var dancers = [];
+$(document).ready(function() {
 
   $('.addDancerButton').on('click', function(event) {
     event.preventDefault();
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     if ( event.target.id === 'masse' ) {
       let bacchanalianFiends = 0;
-      while ( bacchanalianFiends < 100 ) {
+      while ( bacchanalianFiends < 12 ) {
         bacchanalianFiends++;
         createDancer(danceClass);
       }
@@ -42,6 +42,19 @@ $(document).ready(function() {
       dancers[i].lineUp();
     }
     
+  });
+  
+  $(document).on('mouseenter', '.samba-dancer', function(event) {
+    event.preventDefault();
+    $(this).addClass('scale');
+  });
+  $(document).on('mouseleave', '.samba-dancer', function(event) {
+    event.preventDefault();
+    $(this).removeClass('scale');
+  });
+  $(document).on('click', '.dancer img', function(event) {
+    event.preventDefault();
+    $(this).parent().remove();
   });
 
 });

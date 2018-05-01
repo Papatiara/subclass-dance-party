@@ -1,5 +1,5 @@
 var Dancer = function(top, left, timeBetweenSteps) {
-  this.$node = $('<span class="dancer"></span>');
+  this.$node = $('<span class="dancer"><img src="bugs/sad.gif" /></span>');
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
@@ -16,7 +16,8 @@ Dancer.prototype.randomizeColor = function() {
 Dancer.prototype.setColor = function() {
   this.$node.css({
     backgroundColor: this.colors[ this.randomizeColor() ],
-    borderColor: this.colors[ this.randomizeColor() ]
+    borderColor: this.colors[ this.randomizeColor() ],
+    zIndex: this.randomizeColor()
   });
 };
 

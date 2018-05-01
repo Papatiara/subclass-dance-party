@@ -1,6 +1,6 @@
 var SambaDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
-  this.$node = $('<span class="dancer samba-dancer"></span>');
+  this.$node = $('<span class="dancer samba-dancer"><img src="bugs/flying.gif" /></span>');
   this.translateX = 0;
   this.translateY = 0;
   this.sambaFerocity = 64;
