@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
+  var dancers = [];
+
   $('.addDancerButton').on('click', function(event) {
+    event.preventDefault();
 
     let danceClass = $(this).data('dancer-maker-function-name');
 
@@ -16,6 +19,7 @@ $(document).ready(function() {
       dancer.step();
 
       $('body').append(dancer.$node);
+      dancers.push( dancer );
     };
     createDancer(danceClass);
 
@@ -27,6 +31,17 @@ $(document).ready(function() {
       }
     }
 
+  });
+
+  $('#lineUp').on('click', function(event) {
+    event.preventDefault();
+    
+    $('body').toggleClass('lineUp');
+    
+    for ( let i = 0; i < dancers.length; i++ ) {
+      dancers[i].lineUp();
+    }
+    
   });
 
 });

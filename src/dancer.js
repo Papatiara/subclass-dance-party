@@ -29,9 +29,11 @@ Dancer.prototype.setPosition = function() {
 };
 
 Dancer.prototype.step = function() {
-  setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  if ( !$('body').hasClass('lineUp') ) {
+    setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  }
 };
 
 Dancer.prototype.lineUp = function() {
-  console.log('Line up!!');
+  this.step();
 };
