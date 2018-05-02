@@ -108,6 +108,9 @@ span.dancer img {
   position: static;
 }
 
+#weep-day {
+  display: none;
+}
 
 /*
 .dancer {

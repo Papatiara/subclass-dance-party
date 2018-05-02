@@ -116,11 +116,12 @@ Dancer.prototype.clear = function() {
 };
 
 Dancer.prototype.clearAll = function() {
+  $('#weep-day').trigger('pause');
+  musicIsPlaying = false;
   $('#raptor').trigger('click');
   let dancers = window.dancers.slice(0);
   for ( let i = 0; i < dancers.length; i++ ) {
     dancers[i].clear();
   }
-  
-}
+};
 

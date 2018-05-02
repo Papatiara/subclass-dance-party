@@ -1,9 +1,15 @@
 var dancers = [];
+var musicIsPlaying = false;
 
 $(document).ready(function() {
 
   $('.addDancerButton').on('click', function(event) {
     event.preventDefault();
+
+    if ( !musicIsPlaying ) {
+      $('#weep-day').trigger('play');
+      musicIsPlaying = true;  
+    }
 
     let danceClass = $(this).data('dancer-maker-function-name');
 
