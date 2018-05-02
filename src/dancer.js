@@ -78,11 +78,11 @@ Dancer.prototype.neighbors = function() {
       for ( let j = 0; j < population.length; j++ ) {
         let dancer = population[j];
         
-        let heroTop = hero.top + hero.$node.height()/2;
-        let heroLeft = hero.left + hero.$node.width()/2;
+        let heroTop = hero.top + hero.$node.height() / 2;
+        let heroLeft = hero.left + hero.$node.width() / 2;
 
-        let dancerTop = dancer.top + dancer.$node.height()/2;
-        let dancerLeft = dancer.left + dancer.$node.width()/2;
+        let dancerTop = dancer.top + dancer.$node.height() / 2;
+        let dancerLeft = dancer.left + dancer.$node.width() / 2;
         
         let distanceToHero = Math.sqrt( Math.pow((heroTop - dancerTop), 2) + Math.pow(( heroLeft - dancerLeft), 2) );
 
