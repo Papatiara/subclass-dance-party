@@ -57,15 +57,6 @@ Dancer.prototype.step = function() {
     }
 
   }
-
-  // if ( !$('body').hasClass('lineUp') ) {
-
-  //   setTimeout(this.step.bind(this), this.timeBetweenSteps);
-  //   this.setPosition();
-    
-  //   console.log(this.top);
-  // }
-
 };
 
 Dancer.prototype.neighbors = function() {
@@ -94,12 +85,14 @@ Dancer.prototype.neighbors = function() {
         }
       }
     }
-    if ( this.nearestNeighbor.distance === this.nearestNeighbor.is.nearestNeighbor.distance && this.nearestNeighbor.is.exists ) {
-      var teamColor = this.colors[ this.randomizeColor() ];
-      this.$node.css('background-color', teamColor);
-      this.nearestNeighbor.is.$node.css('background-color', teamColor);
-    } else {
-      this.$node.css('background-color', 'transparent');
+    if ( this.nearestNeighbor.is.exists ) {
+      if ( this.nearestNeighbor.distance === this.nearestNeighbor.is.nearestNeighbor.distance ) {
+        var teamColor = this.colors[ this.randomizeColor() ];
+        this.$node.css('background-color', teamColor);
+        this.nearestNeighbor.is.$node.css('background-color', teamColor);
+      } else {
+        this.$node.css('background-color', 'transparent');
+      }
     }
   }
 };
