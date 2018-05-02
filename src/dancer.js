@@ -107,11 +107,20 @@ Dancer.prototype.lineUp = function() {
 };
 
 Dancer.prototype.clear = function() {
-  this.exists = false;
   this.$node.remove();
+  this.exists = false;
   window.dancers = dancers.filter( function( dancer ) {
     return dancer.exists;
   });
   this.neighbors();
 };
+
+Dancer.prototype.clearAll = function() {
+  $('#raptor').trigger('click');
+  let dancers = window.dancers.slice(0);
+  for ( let i = 0; i < dancers.length; i++ ) {
+    dancers[i].clear();
+  }
+  
+}
 

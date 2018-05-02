@@ -52,5 +52,14 @@ $(document).ready(function() {
     event.preventDefault();
     $(this).removeClass('scale');
   });
+  
+  $('#raptor').raptorize({
+    // 'delayTime': 5000,
+    'enterOn': 'click'
+  });
+  
+  $(document).on('click', '#endParty', function(event) {
+    Dancer.prototype.clearAll();
+  });
 
 });

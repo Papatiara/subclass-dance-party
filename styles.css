@@ -44,11 +44,15 @@ a:link, a:visited, a:active {
   float: right;
 }
 
-#lineUp {
+#lineUp, #endParty {
   float: left;
 }
 
-img {
+#raptor {
+  display: none;
+}
+
+span.dancer img {
   border: none;
   display: block;
   transition: 0.3s all ease-in-out;
