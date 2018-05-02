@@ -119,5 +119,6 @@ Dancer.prototype.clear = function() {
   window.dancers = dancers.filter( function( dancer ) {
     return dancer.exists;
   });
+  this.neighbors();
 };
 
