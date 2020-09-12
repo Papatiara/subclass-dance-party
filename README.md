@@ -1,4 +1,4 @@
-Implementation of a "bug party" using Jquery.
-I used Mocha/Chai to implement unit tests.
+JQuery implementation of bug party. 
+Mocha/Chai unit tests.
 
-![](https://j.gifs.com/E8wW4k.gif)
+![](https://j.gifs.com/K1D93n.gif)
