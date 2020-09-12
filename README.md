@@ -1,2 +1,4 @@
-# subclass-dance-party
-This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project was worked on with a pair.
+Implementation of a "bug party" using Jquery.
+I used Mocha/Chai to implement unit tests.
+
+![](https://j.gifs.com/E8wW4k.gif)
